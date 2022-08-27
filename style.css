@@ -1,0 +1,43 @@
+#jogo{
+    margin: auto;
+    text-align: center;
+}
+h1{
+    margin-bottom: 50px;
+}
+h2{
+    display: inline;
+    margin-right: 10px;
+}
+#current{
+    font-weight: bolder;
+    font-size: 20px;
+}
+#recomeca{
+    display: block;
+    margin: 20px auto 20px auto;
+}
+#campo{
+    margin: auto;
+    text-align: center;
+    border-spacing: 0px;
+    scroll-padding: 0px;
+    padding-bottom: 30px;
+}
+.coluna{
+    border: 5px;
+    border-top: 0px;
+    border-left: 0px;
+    border-style: solid;
+    border-color: black;
+    padding: 70px;
+    font-size: 40px;
+    box-sizing: border-box;
+    
+}
+.coluna.ultima{
+    border-bottom: 0px;
+}
+.coluna.ultlinha{
+    border-right: 0px;
+}
