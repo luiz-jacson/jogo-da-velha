@@ -2,6 +2,7 @@ const cells = document.querySelectorAll('td');
 const atual = document.querySelector('#current');
 const recomeca = document.querySelector('#recomeca');
 var jogando = true;
+var empate = false;
 let checkwinner = [
     [0,1,2],
     [3,4,5],
@@ -48,6 +49,7 @@ recomeca.addEventListener('click', function(){
 
 
 function checaVencedor(){
+    let cont = 0;
     for(var i = 0; i < checkwinner.length; i++){
         const condition = checkwinner[i];
         const celA = options[condition[0]];
@@ -68,6 +70,17 @@ function checaVencedor(){
                 }
             }
         
+        }
+    }
+    for(var j = 0; j < options.length; j++){
+        if(options[j] != ""){
+           cont ++; 
+        }
+        if(cont == 9){
+            document.querySelector('#h2').innerHTML = '';
+            document.querySelector('#current').innerHTML = 'Empate';
+            jogando = false;
+            break;
         }
     }
 }
