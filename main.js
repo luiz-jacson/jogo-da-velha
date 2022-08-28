@@ -72,15 +72,17 @@ function checaVencedor(){
         
         }
     }
-    for(var j = 0; j < options.length; j++){
-        if(options[j] != ""){
-           cont ++; 
-        }
-        if(cont == 9){
-            document.querySelector('#h2').innerHTML = '';
-            document.querySelector('#current').innerHTML = 'Empate';
-            jogando = false;
-            break;
+    if (jogando != false){
+        for(var j = 0; j < options.length; j++){
+            if(options[j] != ""){
+            cont ++; 
+            }
+            if(cont == 9){
+                document.querySelector('#h2').innerHTML = '';
+                document.querySelector('#current').innerHTML = 'Empate';
+                jogando = false;
+                break;
+            }
         }
     }
 }
